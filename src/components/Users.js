@@ -36,7 +36,7 @@ const DUMMY_USERS = [
 
 class Users extends Component {
   constructor() {
-    super();
+    super()
     this.state = { showUsers: true }
   }
 
