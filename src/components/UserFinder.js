@@ -36,13 +36,19 @@ const DUMMY_USERS = [
 class UserFinder extends Component {
     constructor() {
         super()
-        this.state = { filteredUsers: DUMMY_USERS, searchTerm: '' }
+        this.state = { filteredUsers: [], searchTerm: '' }
     }
 
     searchChangeHandler(event) {
         this.setState({ searchTerm: event.target.value })
     }
 
+    //Loading users when component is rendered
+    componentDidMount() {
+        this.setState({ filteredUsers: DUMMY_USERS })
+    }
+
+    //Updating users with state/props changes
     componentDidUpdate(prevProps, prevState) {
         if (prevState.searchTerm !== this.state.searchTerm) {
             this.setState({ filteredUsers: DUMMY_USERS.filter((user) => user.name.includes(this.state.searchTerm)) })
