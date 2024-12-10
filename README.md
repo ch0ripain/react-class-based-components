@@ -28,7 +28,7 @@ class User extends Component {
 ```
 
 - <code>Component</code> must be imported from React
-- <code>User</code> must <code>extends Component</code> ➡️ it allow to use all the methods from the parent (Component)
+- <code>User</code> must <code>extends Component</code> ➡️ it allow to use all the methods from the parent (<code>Component</code>)
 - <code>constructor()</code> ➡️ enables you to provide any custom initialization that must be done before any other methods can be called on an instantiated object.
 - <code>super()</code> ➡️ call the constructor of its parent class to access the parent's properties and methods
 - <code>render()</code> ➡️ inherited method that allows to render the value inside
@@ -85,7 +85,7 @@ class Users extends Component {
 ```
 
 The changes I need to make to manage state in my class shown above are:
-- <code>this.state</code> ➡️ property inherited from the Component whose value must always be an object {}
+- <code>this.state</code> ➡️ property inherited from the <code>Component</code> whose value must always be an <code>Object ➡️ {}</code>
 - <code>toggleUsersHandler()</code> ➡️ as my class method and also using the keyword this to refer my class context
 - <code>this.state.showUsers</code> ➡️ always refer to the state on my class
 - <code>bind()</code> ➡️ to pass data as an argument to the function of a class based component for context purposes
