@@ -86,8 +86,9 @@ Changes i need to do to manage state in my class showed above are:
 - bind() ➡️ to pass data as an argument to the function of a class based component
 
 If you want to know more about bind take a look on this links
-[https://www.geeksforgeeks.org/reactjs-bind-method/](ReactJS-Bind-Method-GG)
-[https://stackoverflow.com/questions/60774235/what-does-bindthis-is-exactly-doing-in-this-example-of-the-react-app#:~:text=%22bind%22%20method%20is%20used%20to,the%20value%20of%20parent%20component.](ReactJS-Bind-Method-StackOverflow)
+[ReactJS-Bind-Method-GG](https://www.geeksforgeeks.org/reactjs-bind-method/)
+
+[ReactJS-Bind-Method-StackOverflow](https://stackoverflow.com/questions/60774235/what-does-bindthis-is-exactly-doing-in-this-example-of-the-react-app#:~:text=%22bind%22%20method%20is%20used%20to,the%20value%20of%20parent%20component.)
 
 
 
