@@ -1,4 +1,5 @@
 <h1 align='center'>🧙‍♂️ React class-based components 🧙‍♂️</h1>
+
 Class-based components were used a lot a while ago, more specifically in versions prior to React 16.8. In that version React added hooks and with that a more functional way of working based on functional components.
 
 In this project I will demonstrate how to translate functional components to class components and also where one can continue using class based components and how to use some class oriented hooks like useState(), useEffect(), useContext().
