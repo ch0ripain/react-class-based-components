@@ -36,6 +36,7 @@ class User extends Component {
 
 In the example given above the <code>constructor()</code> and <code>super()</code> are not really needed because i don't want to provide any custom initialization or change any inherited property like <code>state</code> from the parent.
 
+---
 ### ⚡️<code>useState()</code>
 ```javascript
 //Functional
@@ -99,6 +100,7 @@ If you want to know more about bind take a look on these links
 
 [ReactJS-Bind-Method-StackOverflow](https://stackoverflow.com/questions/60774235/what-does-bindthis-is-exactly-doing-in-this-example-of-the-react-app#:~:text=%22bind%22%20method%20is%20used%20to,the%20value%20of%20parent%20component.)
 
+---
 ### ⚡️<code>useEffect()</code>
 ```javascript
 //Class
@@ -143,7 +145,7 @@ class User extends Component {
   ...
 }
 ```
-
+---
 ### ⚡️Using Context in Class-based components
 ```javascript
 //First i create my context on my standalone context file
@@ -190,6 +192,7 @@ class UserFinder extends Component {
         this.setState({ filteredUsers: this.context.users })
     }
 ```
+---
 ### ⚡️Error Boundaries
 This is probably the main reason to use a class-based component nowadays, as React doesn't support error handling yet (it could barely be implemented using try catch or something like that)
 ```javascript
