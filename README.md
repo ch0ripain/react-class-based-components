@@ -2,7 +2,7 @@
 
 Class-based components were used a lot a while ago, more specifically in versions prior to React 16.8. In that version React added hooks and with that a more functional way of working based on functional components.
 
-In this project I will demonstrate how to translate functional components to class components and also where one can continue using class based components and how to use some class oriented hooks like useState(), useEffect(), useContext().
+In this project I will demonstrate how to translate functional components to class components and also where one can continue using class based components and how to use some class oriented hooks like <code>useState()</code>, <code>useEffect()</code>, <code>useContext()</code>.
 
 ## ⚡️Functional component to class-based component
 ```javascript
@@ -27,16 +27,16 @@ class User extends Component {
 <User name={user.name} />
 ```
 
-- Component must be imported from React
-- User must extends Component ➡️ it allow to use all the methods from the parent (Component)
-- constructor() ➡️ enables you to provide any custom initialization that must be done before any other methods can be called on an instantiated object.
-- super() ➡️ call the constructor of its parent class to access the parent's properties and methods
-- render() ➡️ inherited method that allows to render the value inside
-- this ➡️ to refer our class props context (props are automatically forwarded by react)
+- <code>Component</code> must be imported from React
+- <code>User</code> must <code>extends Component</code> ➡️ it allow to use all the methods from the parent (Component)
+- <code>constructor()</code> ➡️ enables you to provide any custom initialization that must be done before any other methods can be called on an instantiated object.
+- <code>super()</code> ➡️ call the constructor of its parent class to access the parent's properties and methods
+- <code>render()</code> ➡️ inherited method that allows to render the value inside
+- <code>this</code> ➡️ to refer our class props context (props are automatically forwarded by react)
 
-In the example given above the constructor() and super() are not really needed because i don't want to provide any custom initialization or change any inherited property like state from the parent.
+In the example given above the <code>constructor()</code> and <code>super()</code> are not really needed because i don't want to provide any custom initialization or change any inherited property like <code>state</code> from the parent.
 
-### ⚡️useState()
+### ⚡️<code>useState()</code>
 ```javascript
 //Functional
 import { useState } from 'react';
@@ -85,13 +85,13 @@ class Users extends Component {
 ```
 
 The changes I need to make to manage state in my class shown above are:
-- this.state ➡️ property inherited from the Component whose value must always be an object {}
-- toggleUsersHandler() ➡️ as my class method and also using the keyword this to refer my class context
-- this.state.showUsers ➡️ always refer to the state on my class
-- bind() ➡️ to pass data as an argument to the function of a class based component for context purposes
+- <code>this.state</code> ➡️ property inherited from the Component whose value must always be an object {}
+- <code>toggleUsersHandler()</code> ➡️ as my class method and also using the keyword this to refer my class context
+- <code>this.state.showUsers</code> ➡️ always refer to the state on my class
+- <code>bind()</code> ➡️ to pass data as an argument to the function of a class based component for context purposes
 
 > [!NOTE]
-> You can avoid use "bind" syntax if you use arrow function syntax instead ➡️ toggleUsersHandler() = () => { ... };
+> You can avoid use "bind" syntax if you use arrow function syntax instead ➡️ <code>toggleUsersHandler() = () => { ... };</code>
 
 If you want to know more about bind take a look on these links
 
@@ -99,7 +99,7 @@ If you want to know more about bind take a look on these links
 
 [ReactJS-Bind-Method-StackOverflow](https://stackoverflow.com/questions/60774235/what-does-bindthis-is-exactly-doing-in-this-example-of-the-react-app#:~:text=%22bind%22%20method%20is%20used%20to,the%20value%20of%20parent%20component.)
 
-### ⚡️useEffect()
+### ⚡️<code>useEffect()</code>
 ```javascript
 //Class
 class UserFinder extends Component {
@@ -127,13 +127,13 @@ class UserFinder extends Component {
     render() {...}
 }
 ```
-When using useEffect() on class-based component there are 3 mainly methods that allow me to handle that hook:
+When using <code>useEffect()</code> on class-based component there are 3 main methods that allow me to handle that hook:
 
-- componentDidMount() ➡️ equivalent to useEffect() without deps, only executed once the component is rendered.
-- componentDidUpdate() ➡️ equivalent to useEffect() with deps, it is executed every time a property or state changes. We also need to manage those changes and what will happen next.
-- componentWillUnmount() ➡️ equivalent to useEffect() cleanup function, executed when the component is unmounted
+- <code>componentDidMount()</code> ➡️ equivalent to <code>useEffect()</code> without deps, only executed once the component is rendered.
+- <code>componentDidUpdate()</code> ➡️ equivalent to <code>useEffect()</code> with deps, it is executed every time a property or state changes. We also need to manage those changes and what will happen next.
+- <code>componentWillUnmount()</code> ➡️ equivalent to <code>useEffect()</code> cleanup function, executed when the component is unmounted
 
-This is a example of componentWillUnmount()
+This is a example of <code>componentWillUnmount()</code>
 ```javascript
 class User extends Component {
   ...
@@ -213,7 +213,7 @@ class ErrorBoundary extends Component {
     }
 }
 ```
-- componentDidCatch() ➡️ catches exceptions generated in descendant components.
+- <code>componentDidCatch()</code> ➡️ catches exceptions generated in child components.
 
 ```javascript
 // Wrap child components where errors should occur
